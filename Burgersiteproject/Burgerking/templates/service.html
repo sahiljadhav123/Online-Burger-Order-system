@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Service</title>
+  <link rel="stylesheet" href="{% static 'css/main.css' %}"/>
+</head>
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="#">Burger KING</a>
+      </div>
+      <ul>
+        <li><a href="/menu">Menu</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/service">Service</a></li>
+        <li><a href="/feedback">Feedback</a></li>
+        {% if not request.user.is_authenticated %}
+        <li><a href="{% url 'login' %}">Login</a></li>
+        {% else %}
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+  <br><br><br><br><br><br>
+<h2 style="background-color:#FFFF00" ;><center>Terms And Conditions:</center></h2><br><br>
+<p>
+<b>March 31, 2019</b>
+
+These Terms of Service (the “Terms”) govern your use of any website, mobile or tablet application, digital in-restaurant kiosk, or other online service or platform of Restaurant Brands International, Inc., or any of its companies, including without limitation the BURGER KING®, the TIM HORTONS® and the POPEYES® restaurant brands (collectively, “RBI”), that provides an authorized link to the Terms (collectively, the “Services”), regardless of who owns or operates the Services or the restaurant you ultimately visit, as well as our interactions with you on third party platforms.
+</p><br>
+<h4>1. BINDING AGREEMENT</h4>
+  <p>
+The Terms are a binding legal contract between you and RBI. Please read the Terms carefully before using the Services. Your use of the Services means that you agree to be bound by the Terms. Do not use the Services if you do not accept the Terms.
+
+We may modify the Terms at any time. Your use of the Services after we post modifications to the Terms means that you accept the modified Terms. You must be 13 years or older to use the Services.
+
+EXCEPT WHERE PROHIBITED BY APPLICABLE LAW, WHICH MAY INCLUDE THE PROVINCE OF QUEBEC, THESE TERMS CONTAIN DISCLAIMERS OF WARRANTIES (SECTION 12), DISCLAIMERS OF LIABILITY AND AN EXCLUSIVE REMEDY (SECTION 13), AND A BINDING ARBITRATION CLAUSE AND CLASS ACTION WAIVER (SECTION 18). PLEASE READ THEM CAREFULLY.
+  </p><br>
+<h4>2. PRIVACY</h4>
+  <p>
+By using the Services, you acknowledge that you have reviewed and understand our Privacy Policy, and consent to the practices described in that policy.
+  </p><br>
+<h4>3. REGISTRATION AND SECURITY</h4>
+  <p>
+You may register for certain activities provided through the Services. When you register or provide any other information in connection with the Services, you agree to provide accurate, current, and complete information and to promptly update this information to maintain its accuracy. You are responsible for maintaining the confidentiality of any password and username that you are given or select, and you are responsible for all activities that occur under your password or account. RBI has the right to suspend or terminate any account or other registration if it suspects that such information is inaccurate or incomplete. You agree to immediately notify RBI of any unauthorized use of your password or username or any other breach of security.
+  </p><br>
+</body>
+</html>
